@@ -1,0 +1,283 @@
+body {
+  background: #131212;
+  color: whitesmoke;
+}
+
+header {
+  font-family: monospace;
+  display: flex;                  /*  put h1, nav, and p on one line */
+  align-items: center;            /*  vertically center them */
+  justify-content: space-between; /* left (h1), center (nav), right (p) */
+  padding: 15px 40px;
+}
+
+header h1 a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;  
+  flex: 1;                    
+}
+
+header nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+header p a{
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.about {
+  max-width: 800px;          /* keeps the text readable and centered */
+  margin: 50px auto;        /* centers the section horizontally */
+  padding: 0 20px;           /* adds space on left/right for smaller screens */
+  text-align: left;          /* keeps text aligned left */
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.about h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+ .experience {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.experience h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; /* Adjusted for perfect alignment with dots */
+  top: 10px;
+  bottom: 0;
+  width: 2px;
+  height: 300px;
+  background-color: #444;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -30px; /* Matches line position */
+  top: 4px;
+  height: 14px;
+  width: 14px;
+  background-color: #131212;
+  border: 2px solid #00bcd4;
+  border-radius: 50%;
+  z-index: 1; /* Keeps the dot above the line */
+}
+
+.timeline a {
+  color: #00bcd4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.timeline h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.timeline .date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.timeline p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  color: rgb(213, 213, 213);
+} 
+
+.storyHR {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.storyHR hr{
+    border: solid 1px whitesmoke;
+}
+
+.storyHR h1{
+    padding-top: 0px;
+    padding-bottom: 50px;
+    font-size: 40px;
+}
+
+.storyHR h2{
+    padding-bottom: 20px;
+    color: rgb(213, 213, 213);
+}
+
+.beginning{
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.beginning p{
+    font-size: 20px;
+}
+
+.beginning .p2{
+    font-size: 20px;
+    padding-right: 80px;
+}
+
+/* Keep h2 stacked above all paragraphs */
+.beginning h2,
+.webDevelopment h2,
+.Javascript h2,
+.stillLearning h2 {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Flex for paragraph + number only */
+.paraWithNumber {
+  display: flex;
+  align-items: flex-start;  /* align number with top of paragraph */
+  gap: 20px;                /* space between number and paragraph */
+}
+
+/* Alternate number sides */
+.beginning .paraWithNumber nav,
+.Javascript .paraWithNumber nav {
+  order: 2;                 /* number on right */
+  margin-left: 80px;
+}
+
+.webDevelopment .paraWithNumber nav,
+.stillLearning .paraWithNumber nav {
+  order: -1;                /* number on left */
+  margin-right: 80px;
+}
+
+.paraWithNumber nav {
+  font-size: 20px;                /* adjust number size */
+  width: 50px;                     /* equal width */
+  height: 50px;                    /* equal height */
+  flex-shrink: 0;                  /* prevent shrinking */
+  border: 2px solid whitesmoke;    /* border color and thickness */
+  border-radius: 50%;              /* makes it a circle */
+  
+  display: flex;                   /* center the number inside */
+  align-items: center;             /* vertical center */
+  justify-content: center;         /* horizontal center */
+  
+  background-color: whitesmoke;       /* optional: same as body for filled effect */
+  color: #131212;               /* text color */
+}
+
+.webDevelopment{
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+
+.webDevelopment p{
+    font-size: 20px;
+}
+
+.Javascript {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-right: 80px;
+}
+
+.Javascript p{
+    font-size: 20px;
+}
+
+.Javascript .p2{
+    font-size: 20px;
+    padding-right: 80px;
+}
+
+.Javascript p a {
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+.stillLearning{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.stillLearning p{
+    font-size: 20px;
+} 
+
+.stillLearning p a{
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+.footerHR{
+    border: solid 1px #7e7e7e;
+    max-width: 900px;
+}
+
+footer{
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+footer strong{
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #00bcd4;
+}

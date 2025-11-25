@@ -1,0 +1,246 @@
+body {
+  background: #131212;
+  color: whitesmoke;
+}
+
+header {
+  font-family: monospace;
+  display: flex;                  /*  put h1, nav, and p on one line */
+  align-items: center;            /*  vertically center them */
+  justify-content: space-between; /* left (h1), center (nav), right (p) */
+  padding: 15px 40px;
+}
+
+header h1 a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;  
+  flex: 1;                    
+}
+
+header nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+header p a{
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.profilediv{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+  text-align: left;                 /* text aligns left */
+  border: 1px solid #2a2a2a;        /* subtle outline */
+  border-radius: 10px;              /* soft rounded corners */
+  padding: 0px 20px; 
+  max-width: 680px;                 /* controls width */
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.profile h2 {
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+.profile h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.profile p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* center the section like the rest */
+.whatIworkWith {
+  text-align: center;
+  margin: 60px auto;
+  font-family: sans-serif;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.whatIworkWith h1{
+    text-align: left;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+/* container (keeps width consistent and centers) */
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* slider-track = all logos repeated in one continuous row */
+.slider-track {
+  display: flex;
+  align-items: center;
+  width: max-content;           /* fits the total logo width */
+  animation: slide 10s linear infinite;
+}
+
+.slider ion-icon{
+  font-size: 40px;
+}
+
+/* each slider group merges into one line naturally */
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;                    /* even spacing between each logo */
+  padding: 15px 0;
+  margin-right: 80px;
+}
+
+/* move the entire track smoothly by half its own width */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* gradient masks (optional) */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.container::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(19,18,18,0), #131212);
+}
+
+.container::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(19,18,18,0), #131212);
+}
+
+.slider-track:hover { animation-play-state: paused; }
+
+
+ .experience {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.experience h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; /* Adjusted for perfect alignment with dots */
+  top: 10px;
+  bottom: 0;
+  width: 2px;
+  height: 300px;
+  background-color: #444;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -30px; /* Matches line position */
+  top: 4px;
+  height: 14px;
+  width: 14px;
+  background-color: #131212;
+  border: 2px solid #00bcd4;
+  border-radius: 50%;
+  z-index: 1; /* Keeps the dot above the line */
+}
+
+.timeline a {
+  color: #00bcd4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.timeline h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.timeline .date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.timeline p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  color: rgb(213, 213, 213);
+} 
+.footerHR{
+    border: solid 1px #7e7e7e;
+    max-width: 900px;
+}
+
+footer{
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+footer strong{
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #00bcd4;
+}

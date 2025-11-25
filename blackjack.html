@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+   body{
+    font-family: monospace;
+    background-color: green;
+    background-size: cover;
+    color: whitesmoke;
+    font-weight: bold;
+
+    display: flex;               /* Aktiviert Flexbox */
+    flex-direction: column;      /* Elemente untereinander */
+    justify-content: center;     /* Vertikal zentrieren */
+    align-items: center;         /* Horizontal zentrieren */
+
+    height: 100vh;               /* gesamte Höhe der Seite */
+    margin: 0;                   /* Entfernt Standardabstand */
+    text-align: center;          /* Text weiterhin zentriert */
+}
+
+h1{
+    color: goldenrod;
+}
+
+#message-el{
+    font-style: italic;
+}
+
+button{
+    color: green;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+    </style>
+
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p id="cards-el">Cards:</p>
+    <p id="sum-el">Sum:</p>
+    <button onclick="startGame()">START GAME</button>
+    <button onclick="newCard()">NEW CARD</button>
+    <p id="player-el"></p>
+    
+
+
+    <script>
+        let cards = []                //array - ordered list of items
+let sum = 0
+let hasBlackJack = false
+let isAlive = false                  //checks if the statement happened and then saves it as true or false
+let message = ""                    //Declares a variable called messages that has an emtpy string
+let messageEl = document.getElementById("message-el")
+//let sumEl = document.getElementById("sum-el")
+let sumEl = document.querySelector("#sum-el")       //new way of getting the ID, this is the queryselector which needs the # or . or whatever class it is
+let cardsEl = document.querySelector("#cards-el")
+let playerEL = document.getElementById("player-el")
+
+
+let player = {
+    name: "Balance",
+    chips: 200
+}
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
+
+
+function startGame(){
+    
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
+
+function renderGame() {
+    cardsEl.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++){
+        cardsEl.textContent += cards[i] + " "
+    }
+
+    if (sum <= 20) {
+    message = "Do you want to draw a new card?"
+    } else if (sum === 21){
+        message = "Blackjack"
+        hasBlackJack = true
+    } else {
+        message = "You lost."
+        isAlive = false
+    }
+   messageEl.textContent = message
+   sumEl.textContent = "Sum: " + sum
+}
+
+  
+function newCard() {
+      if (isAlive === true && hasBlackJack === false){
+            let card = getRandomCard()
+            sum += card
+            cards.push(card)
+            renderGame()
+    }
+
+}
+
+function getRandomCard(){
+    let randomNumber =  Math.floor(Math.random() * 13)  + 1
+    if (randomNumber === 1){
+        return 11
+    }
+    else if (randomNumber > 10){
+        return 10
+    }
+    else{
+        return randomNumber
+    }
+}
+    </script>
+</body>
+</html>

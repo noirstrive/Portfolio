@@ -1,0 +1,145 @@
+body {
+    background: #131212;
+  color: whitesmoke;
+}
+
+/* main content takes all available space */
+main {
+  flex: 1;             /* pushes footer down if content is short */
+}
+
+header {
+  font-family: monospace;
+  display: flex;                  /*  put h1, nav, and p on one line */
+  align-items: center;            /*  vertically center them */
+  justify-content: space-between; /* left (h1), center (nav), right (p) */
+  padding: 15px 40px;
+}
+
+header h1 a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;  
+  flex: 1;                    
+}
+
+header nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+header p a{
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.profilediv{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.profilediv a{
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+.profilediv ul {
+  display: block;    /* stack items vertically */
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.profilediv li {
+  position: relative;
+  font-size: 20px;
+  display: inline-block; /* keeps underline working only under text */
+  cursor: pointer;
+  margin-bottom: 10px; /* space between items */
+}
+
+/* Animated underline */
+.profilediv li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00bcd4;
+  transition: width 0.3s ease-out;
+  transform-origin: right;
+}
+
+/* Hover effect */
+.profilediv li:hover::after {
+  width: 100%;
+  transform-origin: left;
+}
+
+.profile {
+  text-align: left;                 /* text aligns left */
+  border: 1px solid #2a2a2a;        /* subtle outline */
+  border-radius: 10px;              /* soft rounded corners */
+  padding: 0px 20px; 
+  max-width: 680px;                 /* controls width */
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.profile h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+
+}
+
+.profile h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.profile p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.footerHR{
+    border: solid 1px #7e7e7e;
+    max-width: 900px;
+    margin-top: 100px;
+}
+
+footer{
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+footer strong{
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #00bcd4;
+}
+
