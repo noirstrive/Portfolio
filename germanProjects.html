@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1><a href="index.html">Elias Marte</a></h1>
+
+  <nav>
+    <a href="deutschabout.html">About</a>
+    <a href="germanMyWork.html">My Work</a>
+    <a href="germanProjects.html">Projects</a>
+    <a href="germancontacts.html">Contact</a>
+  </nav>
+
+  <p><a href="projects.html">English</a></p>
+</header>
+
+
+<div class="projects-page">
+
+  <h1>Meine Projekte</h1>
+
+  <div class="search-bar">
+    <ion-icon name="search-outline"></ion-icon>
+    <input id="searchInput" type="text" placeholder="Nach Projekten suchen...">
+  </div>
+
+  
+  <div class="categories">
+    <button class="category active" data-category="all">Alle</button>
+    <button class="category" data-category="javascript">JavaScript</button>
+    <button class="category" data-category="games">Spiele</button>
+    <button class="category" data-category="frontend">Front-End</button>
+    <button class="category" data-category="other">Andere</button>
+  </div>
+
+ 
+  <div id="projectList">
+
+    <!-- Example Project -->
+    <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Color Sorting Game</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          A small JavaScript game where colors must be sorted into the correct boxes.
+        </p>
+
+        <div class="code-block">
+          <pre>
+console.log("Hi there!");
+console.log("I am excited to talk to you.");
+let bot;
+bot = "teacherBot";
+
+let botLocation = "the universe";
+
+console.log("Allow me to introduce myself.");
+
+const botIntroduction = "My name is " + bot + ".";
+console.log(botIntroduction);
+
+const botLocationSentence = "I live in " + botLocation + ".";
+console.log(botLocationSentence);
+
+bot = "professorBot";
+
+const nicknameIntroduction = "My nickname is " + bot + ".";
+console.log(nicknameIntroduction);
+
+bot = "awesomeTeacherBot";
+
+const newNicknameGreeting = "I love my nickname but I wish people would call me " + bot + ".";
+console.log(newNicknameGreeting);
+
+const favoriteSubject = "Computer Science";
+
+const favoriteSubjectSentence = "My favorite subject is " + favoriteSubject + ".";
+console.log(favoriteSubjectSentence);
+;
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy & paste the project block above for more projects -->
+     
+  <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Color Sorting Game</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          A small JavaScript game where colors must be sorted into the correct boxes.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// short code example shown here
+function sortColor(color) {
+  if (color === "red") box1.push(color);
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<hr class="footerHR">
+
+    <footer>
+    © 2025 Elias Marte <strong>|</strong> Konzipiert für Klarheit und Effizienz.
+    <br>
+    Schau dir ein Paar Projekte an auf <a href="https://github.com/noirstrive" target="_blank">GitHub</a>.
+  </footer>
+
+
+<script>
+/* ---------- DROPDOWN ---------- */
+document.querySelectorAll(".project-header").forEach(header => {
+  header.addEventListener("click", () => {
+    header.parentElement.classList.toggle("active");
+  });
+});
+
+
+/* ---------- SEARCH ---------- */
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+  document.querySelectorAll(".project").forEach(project => {
+    const title = project.querySelector("h2").textContent.toLowerCase();
+    project.style.display = title.includes(value) ? "block" : "none";
+  });
+});
+
+
+/* ---------- CATEGORY FILTERS ---------- */
+const categoryButtons = document.querySelectorAll(".category");
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const selected = btn.dataset.category;
+
+    document.querySelectorAll(".project").forEach(project => {
+      if (selected === "all" || project.dataset.category === selected) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,280 +1,143 @@
-body {
-  background: #131212;
-  color: whitesmoke;
+/* PAGE WRAPPER */
+.projects-page {
+  max-width: 950px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-header {
-
-  display: flex;                  /*  put h1, nav, and p on one line */
-  align-items: center;            /*  vertically center them */
-  justify-content: space-between; /* left (h1), center (nav), right (p) */
-  padding: 15px 40px;
-}
-
-header h1 a {
-  font-size: 22px;
-  margin: 0;
+.projects-page h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
   font-weight: bold;
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-.projectsParagraph{
-    color: white;
-    font-family: sans-serif;
-    margin: 60px auto;
-    max-width: 800px;
-    padding: 0 20px;
-    font-size: 20px;
-}
-
-.projectsHone{
-        color: white;
-    font-family: sans-serif;
-    margin: 60px auto;
-    max-width: 800px;
-    padding: 0 20px;
-    font-size: 40px;
-      font-weight: bold;
+  font-family: sans-serif;
 }
 
 
-header {
-  font-family: monospace;
-  display: flex;                  /*  put h1, nav, and p on one line */
-  align-items: center;            /*  vertically center them */
-  justify-content: space-between; /* left (h1), center (nav), right (p) */
-  padding: 15px 40px;
-}
-
-header h1 a {
-  font-size: 22px;
-  margin: 0;
-  font-weight: bold;
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-header nav {
+.search-bar {
+  background: #1b1b1b;
+  border: 1px solid #2e2e2e;
+  padding: 12px 18px;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
-  gap: 50px;  
-  flex: 1;                    
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-header nav a {
-  text-decoration: none;
-  color: whitesmoke;
-  font-weight: 300;
+.search-bar ion-icon {
+  font-size: 24px;
+  color: #a0a0a0;
+}
+
+.search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
   font-size: 18px;
-}
-
-
-header p a{
-  margin: 0;
-  font-weight: 500;
-  font-size: 20px;
-  text-decoration: none;
   color: whitesmoke;
 }
 
-/* --- CARD CONTAINER --- */
-.blackjackCard {
-    width: 800px;
-    height: 420px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background: green;
-    box-shadow: 0 0 40px rgba(255,255,255,0.05);
-    transition: 0.3s ease;
-    margin: auto;
-    font-family: sans-serif;
+
+
+.categories {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
 }
 
-.blackjackCard::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 128, 0, 0.5); /* green @ 50% */
-    z-index: 0;
+.category {
+  padding: 8px 18px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 25px;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
 }
 
-
-
-/* --- FULL BACKGROUND IMAGE --- */
-.blackjackCard img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s ease;
+.category:hover {
+  background: #262626;
 }
 
-/* --- HOVER ZOOM EFFECT FOR IMAGE --- */
-.blackjackCard:hover img {
-    transform: scale(1.15);
-}
-
-/* --- BOTTOM GRADIENT WHITE GLOW --- */
-.blackjackCard::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to top, rgba(255,255,255,0.22), transparent);
-    opacity: 0;
-    transition: 0.4s ease;
-}
-
-.blackjackCard:hover::after {
-    opacity: 1;
-}
-
-/* --- CONTENT INSIDE CARD --- */
-.card-content {
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-    color: white;
-}
-
-/* --- CARD TITLE --- */
-.card-title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* --- TECH TAGS --- */
-.tags {
-    margin-top: 6px;
-    display: flex;
-    gap: 10px;
-
-}
-
-.tag {
-    background: rgba(255,255,255,0.1);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* --- DESCRIPTION --- */
-.desc {
-    margin-top: 12px;
-    color: rgba(255,255,255,0.85);
-    max-width: 500px;
-}
-
-/* --- BUTTON --- */
-.learn-btn {
-    margin-top: 20px;
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 12px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* --- MOVE BUTTON UP ON HOVER --- */
-.blackjackCard:hover .learn-btn {
-    transform: translateY(-8px);
-    box-shadow: 0 5px 20px rgba(255,255,255,0.4);
+.category.active {
+  background: #00bcd4;
+  color: black;
+  border-color: #00bcd4;
 }
 
 
-/* --- CARD CONTAINER --- */
-.passengerLogCard {
-    width: 800px;
-    height: 420px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background: black;
-    box-shadow: 0 0 40px rgba(255,255,255,0.05);
-    transition: 0.3s ease;
-    margin: auto;
-    font-family: sans-serif;
+/* ----------------------------- */
+/* PROJECT DROPDOWNS */
+/* ----------------------------- */
+.project {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-.passengerLogCard::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* black @ 50% */
-    z-index: 0;
+.project-header {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* --- FULL BACKGROUND IMAGE --- */
-.passengerLogCard img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s ease;
-    opacity: 60%;
+.project-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: sans-serif;
 }
 
-/* --- HOVER ZOOM EFFECT FOR IMAGE --- */
-.passengerLogCard:hover img {
-    transform: scale(1.15);
+.project-header ion-icon {
+  font-size: 26px;
+  transition: 0.3s;
 }
 
-/* --- BOTTOM GRADIENT WHITE GLOW --- */
-.passengerLogCard::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to top, rgba(255,255,255,0.22), transparent);
-    opacity: 0;
-    transition: 0.4s ease;
+.project.active .project-header ion-icon {
+  transform: rotate(180deg);
 }
 
-.passengerLogCard:hover::after {
-    opacity: 1;
+.project-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #191919;
+  border-top: 1px solid #2a2a2a;
+  transition: max-height 0.35s ease;
+  font-family: sans-serif;
 }
 
+.project.active .project-content {
+  max-height: 600px;
+}
 
-/* --- MOVE BUTTON UP ON HOVER --- */
-.passengerLogCard:hover .learn-btn {
-    transform: translateY(-8px);
-    box-shadow: 0 5px 20px rgba(255,255,255,0.4);
+.project-description {
+  padding: 20px;
+  font-size: 17px;
+  color: #dcdcdc;
 }
 
 
-
-.footerHR{
-    border: solid 1px #7e7e7e;
-    max-width: 900px;
+/* CODE BLOCK */
+.code-block {
+  background: #121212;
+  border: 1px solid #333;
+  padding: 15px;
+  margin: 0 20px 20px 20px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow-x: auto;
 }
 
-footer{
-    text-align: center;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    color: whitesmoke;
-}
-
-footer strong{
-    font-size: 20px;
-}
-
-footer a{
-    text-decoration: none;
-    color: #00bcd4;
+.code-block pre {
+  color: whitesmoke;
+  white-space: pre-wrap;
 }

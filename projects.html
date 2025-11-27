@@ -1,100 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="noirstirve.png" type="image/x-icon">
-  <link rel="stylesheet" href="projects.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-  <script src="script.js"></script>
 
-  <header>
-    <h1><a href="index.html">Elias Marte</a></h1>
-    <nav>
+<body>
+
+<header>
+  <h1><a href="index.html">Elias Marte</a></h1>
+
+  <nav>
     <a href="about.html">About</a>
-    <a href="">My Work</a>
+    <a href="myWork.html">My Work</a>
     <a href="projects.html">Projects</a>
     <a href="contacts.html">Contact</a>
-    </nav>
-    <p><a href="germanprojects.html">Deutsch</a></p>
-  </header>
+  </nav>
 
-  <body>
-    <h1 class="projectsHone">
-        Projects
-    </h1>
+  <p><a href="germanProjects.html">Deutsch</a></p>
+</header>
+
+
+<div class="projects-page">
+
+  <h1>My Projects</h1>
+
+  <div class="search-bar">
+    <ion-icon name="search-outline"></ion-icon>
+    <input id="searchInput" type="text" placeholder="Search projects...">
+  </div>
+
+  
+  <div class="categories">
+    <button class="category active" data-category="all">All</button>
+    <button class="category" data-category="javascript">JavaScript</button>
+    <button class="category" data-category="games">Games</button>
+    <button class="category" data-category="frontend">Front-End</button>
+    <button class="category" data-category="other">Other</button>
+  </div>
+
+ 
+  <div id="projectList">
+
+    <!-- Example Project -->
+    <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Greeting Bot | Variables and Strings</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Learning the usage of combining Strings with Variables.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// console.log("Hi there!");
+console.log("I am excited to talk to you.");
+let bot;
+bot = "teacherBot";
+let botLocation = "the universe";
+console.log("Allow me to introduce myself.");
+const botIntroduction = "My name is " + bot + ".";
+console.log(botIntroduction);
+const botLocationSentence = "I live in " + botLocation + ".";
+console.log(botLocationSentence);
+bot = "professorBot";
+const nicknameIntroduction = "My nickname is " + bot + ".";
+console.log(nicknameIntroduction);
+bot = "awesomeTeacherBot";
+const newNicknameGreeting = "I love my nickname but I wish people would call me " + bot + ".";
+console.log(newNicknameGreeting);
+const favoriteSubject = "Computer Science";
+const favoriteSubjectSentence = "My favorite subject is " + favoriteSubject + ".";
+console.log(favoriteSubjectSentence);
+console.log("Well, it was nice to talk to you. Have a nice day!")
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy & paste the project block above for more projects -->
+      <div class="project" data-category="games">
+      <div class="project-header">
+        <h2>Numbers Guessing Game | Loops</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Learning the usage of combining Strings with Variables.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// var zahl1 = Math.round(Math.random() * 9 + 0.5)
+var zahl2 = Math.round(Math.random() * 9 + 0.5)
+var zahl3 = Math.round(Math.random() * 9 + 0.5)
+do{
+  var meinVersuch = prompt("Gib einen Tipp ab", "Zahl von 111 bis 999");
+  var tipp1 = meinVersuch.charAt(0);
+  var tipp2 = meinVersuch.charAt(1);
+  var tipp3 = meinVersuch.charAt(2);
+  var richtigeStelle = 0;
+  var richtigeZahl = 0;
+  if(tip1 == zahl1){
+    richtigeStelle++
+  }
+  else if (tipp2 == zahl1 || tipp2 == zahl3){
+    richtigeZahl++
+  }
+  if (tipp3 == zahl3){
+    richtigeStelle++
+  }
+  else if (tipp3 == zahl1 || tipp3 == zahl2){
+    richtigeZahl++
+  }
+  alert (richtigeStelle + "Zahlen an der richtigen Stelle, " + richtigeZahl + "Zahlen kommen im Code vor");
+}
+while(richtigeStelle (smaller than symbole) 3)
+alert("Du hast gewonnen. Super!")
+          </pre>
+        </div>
+      </div>
+    </div>
+
+       <div class="project" data-category="games">
+      <div class="project-header">
+        <h2>Rock, Paper, Scissor | Loops</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Usage of the simple if, do / while loops, to build a simple Rock, Paper, Scissors Game which works based on Numbers.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// var symbolSpieler;
+var symbolComputer;
+var anzahlRunden = 0;
+var gewinneComputer = 0;
+var gewinneSpieler = 0;
+var gewinnBedingung = 3;
+do{
+  ausgedachteZahl = Math.random() * 3;
+  ausgedachteZahl = Math.round(ausgedachteZahl + 0.5);
+  if (ausgedachteZahl == 1) {symbolComputer = "Schere"};
+  if (ausgedachteZahl == 2) {symbolComputer = "Stein"};
+  if (ausgedachteZahl == 3) {symbolComputer = "Papier"};
+  wahlSpieler = 
+  prompt("Gib deine Wahl ein", "Schere ist 1, Stein ist 2, Papier ist 3");
+  if (wahlSpieler == 1) {symbolSpieler = "Schere"};
+  if (wahlSpieler == 2) {symbolSpieler = "Stein"};
+  if (wahlSpieler == 3) {symbolSpieler = "Papier"};
+  if (symbolComputer == symbolSpieler) {alert ("Unentschieden"); }
+  if (symbolComputer == "Schere" && symbolSpieler == "Stein"){
+    gewinneSpieler++
+    alert ("Du gewinnst gegen Schere");
+  }
+  if (symbolComputer == "Schere" && symbolSpieler == "Papier"){
+    gewinneComputer++
+    alert ("Du verlierst gegen Schere");
+  }
+  if (symbolComputer == "Stein" && symbolSpieler == "Schere"){
+    gewinneComputer++
+    alert ("Du verlierst gegen Stein");
+  }
+  if (symbolComputer == "Stein" && symbolSpieler == "Papier"){
+    gewinneComputer++
+    alert ("Du gewinnst gegen Stein");
+  }
+  if (symbolComputer == "Papier" && symbolSpieler == "Stein"){
+    gewinneComputer++
+    alert ("Du verlierst gegen Papier");
+  }
+  if (symbolComputer == "Papier" && symbolSpieler == "Schere"){
+    gewinneComputer++
+    alert ("Du gewinnst gegen Papier");
+  }
+}
+anzahlRunden++;
+while( gewinneSpieler (kleiner als symbol) && gewinneComputer (kleiner als symbol))
+if (gewinneSpieler (kleiner als gleich symbol)){
+  alert ("Du hast das Spiel gewonnen, Super!")
+}
+else{
+  alert("Der Computer war besser und hat das Spiel gewonnen")
+};
+alert(gewinneSpieler + " zu " + gewinneComputer);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+ <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Learning about Arrays | Arrays</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Learning the usage of combining Arrays with Strings.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let featuredPosts = ["Check out my Netflix clone.", 
+    "Here is code for my Project.", 
+    "I have just relaunched my Portfolio"] */
+let cards = [7 , 4 ]
+cards.push(6)
+console.log(cards) */
+let message = [
+    "Hey",
+    "I am",
+    "All good"
+]
+let newMessage = [
+    "same here"
+]
+message.push(newMessage)
+console.log(message)
+message.pop()
+console.log(message)
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+        <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Counting Exercise | Loops</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Simple for Loop to learn the usage of counting.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// for ( let count = 1; count < 11; count += 1) {
+    console.log(count)
+} 
+for ( let i = 10; i < 101; i += 10){
+        console.log(count)
+    } 
+let cards = [7, 3, 9]
+for (let i = 0; i < cards.length; i++)
+    {
+    console.log(cards[i])
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+  <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Lesson about Operators | Operator</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Checking if all the needed things are checked to then go to the next step simply with Operators.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let hasCompletedCourse = true
+let givesCertificate = true
+if (hasCompletedCourse === true && givesCertificate === true){
+    generateCertificate()
+}
+function generateCertificate(){
+    console.log("Generating certificate.....")
+} 
+/* let hasSolvedChallange = false
+let hasHintsLeft = false
+if (hasSolvedChallange === false && hasHintsLeft === false){
+    showSolution()
+}
+function showSolution(){
+    console.log("Showing the Solution.....")
+}
+let likesDocument = true
+let likesStartups = true
+if (likesDocument == true || likesStartups == true){
+    recommendMovie()
+}
+function recommendMovie(){
+    console.log("Hey, check out this new Film, we think you will like it")
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+  <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Tagging the right Variables. | Objects</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Learnt how to create one variable with multiple smaller ones inside. And then recall the smaller ones with simple Object usage.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let course = {
+    title: "Learn CSS Grid for free.",
+    lessons: 16,
+    creator: "Elias Marte",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+console.log( course.tags ) */
+let airbnb = {
+    title: "Hotel",
+    cost: 12,
+    isFree: false,
+    tags: ["4 guests", "1 bedroom"]
+}
+console.log (airbnb.title)
+console.log (airbnb.cost)
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Value in Functions | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          First steps into the Functions.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let player1Time = 102
+let player2Time = 107
+function getFastestRaceTime(){
+    if (player1Time < player2Time) {
+        return player1Time
+    }
+    else if (player2Time < player1Time){
+        return player2Time
+    }
+    else {
+        return player1Time
+    }
+}
+let fastestRace = getFastestRaceTime()
+console.log(fastestRace) 
+function totalRaceTime(){
+    return player1Time + player2Time
+}
+let totalRace = totalRaceTime()
+console.log(totalRace)
+          </pre>
+        </div>
+      </div>
+    </div>
+
     
-    <p class="projectsParagraph">
-        These are my Projects on which i work and test my Skills with.
-    </p>
-<!-- ======== CARD START ======== -->
-<div class="blackjackCard">
+  <div class="project" data-category="javascript">
+      <div class="project-header">
+        <h2>Teacher Chatbot | Variables and Strings</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
 
-    <!-- Full Background Image -->
-    <img src="blackjackimage.png">
-
-    <!-- Content -->
-    <div class="card-content">
-        <div class="card-title">BLACKJACK</div>
-
-        <div class="tags">
-            <div class="tag">JavaScript</div>
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-        </div>
-
-        <p class="desc">
-            Blackjack Game to learn more about Javascript.
+      <div class="project-content">
+        <p class="project-description">
+          Combining Strings with ${variable} inside a Text. Working with .length and also .indexOf
         </p>
 
-        <button class="learn-btn">Learn more →</button>
-    </div>
-
-</div>
-<!-- ======== CARD END ======== -->
-<br><br>
-
-
-
-
-
-
-<!-- ======== CARD START ======== -->
-<div class="passengerLogCard">
-
-    <!-- Full Background Image -->
-    <img src="countingapp.png">
-
-    <!-- Content -->
-    <div class="card-content">
-        <div class="card-title">PASSENGER LOG</div>
-
-        <div class="tags">
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-            <div class="tag">JavaScript</div>
+        <div class="code-block">
+          <pre>
+// console.log("Hi there!");
+const botName = "teacherBot";
+const greeting = `My name is ${botName}.`;
+console.log(greeting);
+const subject = "JavaScript";
+const topic = "strings";
+const sentence = `Today, you will learn about ${topic} in ${subject}.`;
+console.log(sentence);
+const strLengthIntro = `Here is an example of using the length property on the word ${subject}.`;
+console.log(strLengthIntro);
+console.log(subject.length);
+console.log(`Here is an example of using the length property on the word ${topic}.`);
+console.log(topic.length);
+console.log(`Here is an example of accessing the first letter in the word ${subject}.`);
+console.log(subject[0]);
+console.log(`Here is an example of accessing the second letter in the word ${subject}.`);
+console.log(subject[1]);
+console.log(`Here is an example of accessing the last letter in the word ${subject}.`);
+const lastCharacter = subject[subject.length - 1];
+console.log(lastCharacter);
+const learningIsFunSentence = "Learning is fun.";
+console.log("Here are examples of finding the positions of substrings in the sentence.");
+console.log(learningIsFunSentence.indexOf("Learning"));
+console.log(learningIsFunSentence.indexOf("fun"));
+console.log(learningIsFunSentence.indexOf("learning"));
+}
+          </pre>
         </div>
-
-        <p class="desc">
-            Passenger Log Application which was a great start to get into Javascript and HTML to JavaScript connections.
-        </p>
-
-        <button class="learn-btn">Learn more →</button>
+      </div>
     </div>
-
+  </div>
 </div>
-<!-- ======== CARD END ======== -->
 
-<br><br><br><br>
 
 <hr class="footerHR">
-    <footer>
-    © 2025 Elias Marte <strong>|</strong> Built with simplicity.
-    <br>
-    Look at some of my projects on <a href="https://github.com/noirstrive" target="_blank">GitHub</a>.
-  </footer>
+
+<footer>
+  © 2025 Elias Marte <strong>|</strong> Built with simplicity.
+  <br>
+  Look at some of my projects on <a href="https://github.com/noirstrive" target="_blank">GitHub</a>.
+</footer>
+
+
+<script>
+/* ---------- DROPDOWN ---------- */
+document.querySelectorAll(".project-header").forEach(header => {
+  header.addEventListener("click", () => {
+    header.parentElement.classList.toggle("active");
+  });
+});
+
+
+/* ---------- SEARCH ---------- */
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+  document.querySelectorAll(".project").forEach(project => {
+    const title = project.querySelector("h2").textContent.toLowerCase();
+    project.style.display = title.includes(value) ? "block" : "none";
+  });
+});
+
+
+/* ---------- CATEGORY FILTERS ---------- */
+const categoryButtons = document.querySelectorAll(".category");
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const selected = btn.dataset.category;
+
+    document.querySelectorAll(".project").forEach(project => {
+      if (selected === "all" || project.dataset.category === selected) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+
+  });
+});
+</script>
 
 </body>
 </html>
+
