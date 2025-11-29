@@ -39,8 +39,14 @@
   <div class="categories">
     <button class="category active" data-category="all">All</button>
     <button class="category" data-category="javascript">JavaScript</button>
-    <button class="category" data-category="games">Games</button>
-    <button class="category" data-category="frontend">Front-End</button>
+   <!--  <button class="category" data-category="games">Games</button>
+    <button class="category" data-category="frontend">Front-End</button> -->
+    <button class="category" data-category="variables">Variables & Strings</button>
+    <button class="category" data-category="booleans">Boolens and Numbers</button>
+    <button class="category" data-category="functions">Functions</button>
+    <button class="category" data-category="arrays">Arrays</button>
+    <button class="category" data-category="objects">Objects</button>
+    <button class="category" data-category="loops">Loops</button>
     <button class="category" data-category="other">Other</button>
   </div>
 
@@ -48,9 +54,9 @@
   <div id="projectList">
 
     <!-- Example Project -->
-    <div class="project" data-category="javascript">
+    <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Greeting Bot | Variables and Strings</h2>
+        <h2>Greeting Bot | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -88,9 +94,9 @@ console.log("Well, it was nice to talk to you. Have a nice day!")
     </div>
 
     <!-- Copy & paste the project block above for more projects -->
-      <div class="project" data-category="games">
+      <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Numbers Guessing Game | Loops</h2>
+        <h2>Numbers Guessing Game | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -132,9 +138,9 @@ alert("Du hast gewonnen. Super!")
       </div>
     </div>
 
-       <div class="project" data-category="games">
+       <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Rock, Paper, Scissor | Loops</h2>
+        <h2>Rock, Paper, Scissor | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -202,9 +208,9 @@ alert(gewinneSpieler + " zu " + gewinneComputer);
       </div>
     </div>
 
- <div class="project" data-category="javascript">
+ <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Learning about Arrays | Arrays</h2>
+        <h2>Learning about Arrays | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -239,9 +245,9 @@ console.log(message)
     </div>
 
 
-        <div class="project" data-category="javascript">
+        <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Counting Exercise | Loops</h2>
+        <h2>Counting Exercise | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -268,9 +274,9 @@ for (let i = 0; i < cards.length; i++)
       </div>
     </div>
 
-  <div class="project" data-category="javascript">
+  <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Lesson about Operators | Operator</h2>
+        <h2>Lesson about Operators | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -310,9 +316,9 @@ function recommendMovie(){
       </div>
     </div>
 
-  <div class="project" data-category="javascript">
+  <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Tagging the right Variables. | Objects</h2>
+        <h2>Tagging the right Variables. | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -347,9 +353,9 @@ console.log (airbnb.cost)
     </div>
 
 
-     <div class="project" data-category="javascript">
+     <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Value in Functions | Functions</h2>
+        <h2>Value in Functions | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -385,10 +391,124 @@ console.log(totalRace)
       </div>
     </div>
 
-    
-  <div class="project" data-category="javascript">
+
+        <div class="project" data-category="variables">
       <div class="project-header">
-        <h2>Teacher Chatbot | Variables and Strings</h2>
+        <h2>String Inspector | Variables & Strings</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Understand the Inspect and Slive Element to get the right value out of a String.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const fccSentence = "freeCodeCamp is a great place to learn web development.";
+console.log("Here are some examples of the includes() method:");
+const hasFreeCodeCamp = fccSentence.includes("freeCodeCamp");
+console.log(`fccSentence.includes("freeCodeCamp") returns ${hasFreeCodeCamp} because the word "freeCodeCamp" is in the sentence.`);
+const hasJavaScript = fccSentence.includes("JavaScript");
+console.log(`fccSentence.includes("JavaScript") returns ${hasJavaScript} because the word "JavaScript" is not in the sentence.`);
+const hasLowercaseFCC = fccSentence.includes("freecodecamp");
+console.log(`fccSentence.includes("freecodecamp") returns ${hasLowercaseFCC} because includes is case-sensitive.`);
+const message = "Welcome to freeCodeCamp!";
+console.log("Here are some examples of the slice() method:");
+const platform = message.slice(11, 23);
+console.log(`The word "${platform}" was sliced from the message.`);
+const greetingWord = message.slice(0, 7);
+console.log(`The first word is "${greetingWord}".`);
+const endPunctuation = message.slice(-1);
+console.log(`The ending punctuation mark is a "${endPunctuation}"`);
+console.log("Workshop complete! You now know how to use includes() and slice().")
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+           <div class="project" data-category="variables">
+      <div class="project-header">
+        <h2>String Formatter | Variables & Strings</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          How to cut down empty Space within a string and also to convert all the Text to Lowercase or Uppercase.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const userInput = "   Hello World!   ";
+console.log("Original input:");
+console.log(userInput);
+const cleanedInput = userInput.trim();
+console.log("Result of trimming whitespace from both ends:");
+console.log(cleanedInput);
+const trimmedStart = userInput.trimStart();
+console.log("After using the trimStart() method — leading spaces removed:");
+console.log(trimmedStart);
+const trimmedEnd = userInput.trimEnd();
+console.log("After using the trimEnd() method — trailing spaces removed:");
+console.log(trimmedEnd);
+const upperCaseInput = cleanedInput.toUpperCase();
+console.log("Result of using the toUpperCase() method:");
+console.log(upperCaseInput);
+const lowerCaseInput = cleanedInput.toLowerCase();
+console.log("Result of using the toLowerCase() method:");
+console.log(lowerCaseInput);
+const lowercaseWord = "camelcase";
+const camelCasedVersion = lowercaseWord.slice(0, 5) + lowercaseWord[5].toUpperCase()
+console.log("Camel cased version:");
+console.log(camelCasedVersion);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+   <div class="project" data-category="variables">
+      <div class="project-header">
+        <h2>String Transformer | Variables & Strings</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Applying the .replace and .replaceAll elements.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const originalString = "I love cats.";
+console.log("Original string:");
+console.log(originalString);
+const replacedString = originalString.replace("cats", "dogs");
+console.log("After using the replace() method:");
+console.log(replacedString);
+const exampleSentence = "I love cats and cats are so much fun!";
+console.log("Original sentence:");
+console.log(exampleSentence);
+const dogsOnlySentence = exampleSentence.replaceAll("cats", "dogs");
+console.log("Replacing all occurrences of cats with dogs:");
+console.log(dogsOnlySentence);
+const learningSentence = "I love learning!";
+console.log("Original learning sentence:");
+console.log(learningSentence);
+const repeatedLove = "love ".repeat(3).trimEnd();
+console.log(repeatedLove);
+const newSentence = `I ${repeatedLove} learning.`;
+console.log(newSentence);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    
+  <div class="project" data-category="variables">
+      <div class="project-header">
+        <h2>Teacher Chatbot | Variables & Strings</h2>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
 
@@ -429,10 +549,133 @@ console.log(learningIsFunSentence.indexOf("learning"));
         </div>
       </div>
     </div>
+
+
+<div class="project" data-category="booleans">
+      <div class="project-header">
+        <h2>Logic Checker App | Booleans & Numbers</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Checking if the Age is old enough to be allowed to drive and / or he has a job.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const hasDeveloperJob = true;
+if (hasDeveloperJob) {
+  console.log("Timmy is employed as a developer.");
+}
+const isTimmyAGamer = false;
+if (isTimmyAGamer) {
+  console.log("Timmy loves to play World of Warcraft.");
+}
+const timmyAge = 18;
+if (timmyAge >= 16) {
+  console.log("Timmy is old enough to drive.");
+} else {
+  console.log("Timmy is not old enough to drive.");
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+<div class="project" data-category="booleans">
+      <div class="project-header">
+        <h2>Mathbot | Booleans & Numbers</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Coding a Mathbot which shows all the different ways to calculate and round Numbers.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const botName = "MathBot";
+const greeting = `Hi there! My name is ${botName} and I am here to teach you about the Math object!`;
+console.log(greeting);
+console.log("The Math.random() method returns a pseudo random number greater than or equal to 0 and less than 1.");
+const randomNum = Math.random();
+console.log(randomNum);
+console.log("Now, generate a random number between two values.");
+const min = 1;
+const max = 100;
+const randomNum2 = Math.random() * (max - min) + min;
+console.log(randomNum2);
+console.log("The Math.floor() method rounds the value down to the nearest whole integer.");
+const numRoundedDown = Math.floor(6.7);
+console.log(numRoundedDown);
+console.log("The Math.ceil() method rounds the value up to the nearest whole integer.");
+const numRoundedUp = Math.ceil(3.2);
+console.log(numRoundedUp);
+console.log(
+  "The Math.round() method rounds the value to the nearest whole integer."
+);
+const numRounded = Math.round(2.7);
+console.log(numRounded);
+const numRounded2 = Math.round(11.2);
+console.log(numRounded2);
+console.log("The Math.max() and Math.min() methods are used to get the maximum and minimum number from a range.");
+const maxNum = Math.max(3, 125, 55, 24);
+console.log(maxNum);
+const minNum = Math.min(6, 90, 14, 90, 2);
+console.log(minNum);
+console.log("It was fun learning about the different Math methods with you!");
+          </pre>
+        </div>
+      </div>
+    </div>
+
+<div class="project" data-category="booleans">
+      <div class="project-header">
+        <h2>Fortune Teller | Booleans & Numbers</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+          Depending on what Random Number you get you will get a nice Quote.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const fortune1 = "Your cat will look very cuddly today.";
+const fortune2 = "The weather will be nice tomorrow.";
+const fortune3 = "Be cautious of your new neighbors.";
+const fortune4 = "You will find a new hobby soon.";
+const fortune5 = "It would be wise to avoid the color red today.";
+const randomNumber = Math.floor(Math.random() * 5) + 1;
+let selectedFortune;
+if (randomNumber === 1) {
+  selectedFortune = fortune1;
+}
+if (randomNumber === 2) {
+  selectedFortune = fortune2;
+}
+if (randomNumber === 3) {
+  selectedFortune = fortune3;
+}
+if (randomNumber === 4) {
+  selectedFortune = fortune4;
+}
+if (randomNumber === 5) {
+  selectedFortune = fortune5;
+}
+console.log(selectedFortune);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
-
-
 <hr class="footerHR">
 
 <footer>
@@ -486,4 +729,6 @@ categoryButtons.forEach(btn => {
 
 </body>
 </html>
+
+
 
