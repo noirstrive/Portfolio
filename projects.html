@@ -672,10 +672,282 @@ console.log(selectedFortune);
       </div>
     </div>
 
+<div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Calculater Functions | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
 
+      <div class="project-content">
+        <p class="project-description">
+          Quick Calculator where i learnt all about the Basics from Math and also its SquareRoots.
+        </p>
 
+        <div class="code-block">
+          <pre>
+// function calculateSum(num1, num2) {
+  return num1 + num2;
+}
+console.log(calculateSum(2, 5));
+console.log(calculateSum(10, 10));
+console.log(calculateSum(5, 5));
+function calculateDifference(num1, num2) {
+  return num1 - num2;
+}
+console.log(calculateDifference(22, 5));
+console.log(calculateDifference(12, 1));
+console.log(calculateDifference(17, 9));
+function calculateProduct(num1, num2) {
+  return num1 * num2;
+}
+console.log(calculateProduct(13, 5));
+function calculateQuotient(num1, num2) {
+  return num2 === 0 ? "Error: Division by zero" : num1 / num2;
+}
+console.log(calculateQuotient(7, 11));
+console.log(calculateQuotient(3, 0));
+function calculateSquare(num) {
+  return num ** 2;
+}
+console.log(calculateSquare(2));
+console.log(calculateSquare(9));
+function calculateSquareRoot(num) {
+  return Math.sqrt(num);
+}
+console.log(calculateSquareRoot(25));
+console.log(calculateSquareRoot(100));
+          </pre>
+        </div>
+      </div>
+    </div>
+
+<div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Email Masker | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   Email Masker which uses asterisks to mask the username part of an email address 
+        </p>
+
+        <div class="code-block">
+          <pre>
+// function maskEmail(email) {
+  const atIndex = email.indexOf("@");          
+  const name = email.slice(0, atIndex);        
+  const domain = email.slice(atIndex);         
+  const first = name[0];                       
+  const last = name[name.length - 1];          
+  const stars = "*".repeat(name.length - 2);   
+  return first + stars + last + domain;
+}
+let email = "apple.pie@example.com";
+console.log(maskEmail(email));
+          </pre>
+        </div>
+      </div>
+    </div>
+
+<div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Loan Qualification Checker | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   Checking if you are allowed for a Car, Condo or Duplex Loan. With 1 simple function and If and ELSE IF Statements.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// const minIncomeForDuplex = 60000;
+const minCreditScoreForDuplex = 700;
+const minIncomeForCondo = 45000;
+const minCreditScoreForCondo = 680;
+const minIncomeForCar = 30000;
+const minCreditScoreForCar = 650;
+function getLoanMessage(annualIncome, creditScore) {
+  if(creditScore >= minCreditScoreForDuplex && annualIncome >= minIncomeForDuplex) {
+    return "You qualify for a duplex, condo, and car loan."
+  } else if (annualIncome >= minIncomeForCondo && creditScore >= minCreditScoreForCondo) {
+    return "You qualify for a condo and car loan."
+  } else if (annualIncome >= minIncomeForCar && creditScore >= minCreditScoreForCar) {
+    return "You qualify for a car loan."
+  } else {
+    return "You don't qualify for any loans."
+  }
+}
+const duplexLoanMsg = getLoanMessage(85000, 850);
+const condoLoanMsg = getLoanMessage(65000, 690);
+const carLoanMsg = getLoanMessage(45000, 660);
+const noLoanMsg = getLoanMessage(25000, 550);
+console.log(duplexLoanMsg);
+console.log(condoLoanMsg);
+console.log(carLoanMsg);
+console.log(noLoanMsg);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Celsius to Fahrenheit | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   Simple Calculator to swith from celsius to fahrenheit.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// function convertCtoF(celsius) {
+  return celsius * (9 / 5) + 32;
+}
+console.log(convertCtoF(0));   // 32
+console.log(convertCtoF(20));  // 68
+console.log(convertCtoF(30));  // 86
+</pre>
   </div>
 </div>
+</div>
+
+    <div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Counting Cards | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   Yet another very easy Blackjack Game.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let count = 0;
+function cc(card) {
+  if (card >= 2 && card <= 6) {
+    count++;
+  } else if (card >= 7 && card <= 9) {
+    // do nothing
+  } else {
+    count--;
+  }
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+cc(2);    // count = 1  → "1 Bet"
+cc(3);    // count = 2  → "2 Bet"
+cc("K");  // count = 1  → "1 Bet"
+cc("A");  // count = 0  → "0 Hold"
+cc(10);   // count = -1 → "-1 Hold"
+</pre>
+  </div>
+</div>
+</div>
+
+
+   <div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Leap Year Calculator | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   Calculate any Year and see if it is a Leap Year.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// let year = 2025;
+function isLeapYear(number) {
+  if (number % 400 === 0) {
+    return `${number} is a leap year.`;
+  } 
+  else if (number % 100 === 0) {
+    return `${number} is not a leap year.`;
+  } 
+  else if (number % 4 === 0) {
+    return `${number} is a leap year.`;
+  } 
+  else {
+    return `${number} is not a leap year.`;
+  }
+}
+const result = isLeapYear(year);
+console.log(result);
+
+</pre>
+  </div>
+</div>
+</div>
+
+   <div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Truncate String | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   If the length of the string is more than the given number, the string should be truncated to reduce the length so that it is equal the given number, and ... should be appended at the end of the truncated string. If the length of the string is equal to or lower than the given number, the string should be returned unchanged.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// function truncateString(str, num){
+  if (str.length > num){
+    return str.slice(0, num) + "...";
+  }
+  else {
+    return str;
+  }
+}
+</pre>
+  </div>
+</div>
+</div>
+
+
+   <div class="project" data-category="functions">
+      <div class="project-header">
+        <h2>Confirm the Ending | Functions</h2>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+      <div class="project-content">
+        <p class="project-description">
+   The function should return true if the first string ends with the second string, and false otherwise.
+   I should not use the .endsWith() method; instead, i use one of the JavaScript substring methods to achieve this.
+        </p>
+
+        <div class="code-block">
+          <pre>
+// function confirmEnding(stringCheck, stringAgainst) {
+  const ending = stringCheck.slice(-stringAgainst.length);
+  return ending === stringAgainst;
+}
+</pre>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</body>
+
 <hr class="footerHR">
 
 <footer>
@@ -729,6 +1001,7 @@ categoryButtons.forEach(btn => {
 
 </body>
 </html>
+
 
 
 
